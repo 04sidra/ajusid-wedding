@@ -514,11 +514,13 @@ section {
 }
 
 .hero-copy {
+  width: 100%;
   max-width: 530px;
   margin: 15px auto;
   color: #819173;
   font-size: 21px;
   line-height: 1.9;
+  text-align: center;
 }
 
 .hero-date {
@@ -755,6 +757,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 25%;
 }
 
 .person-card h3 {
@@ -842,6 +845,13 @@ section {
   font-size: 48px;
   font-weight: 400;
 }
+.event-card .nikah-time {
+  margin: 20px 0;
+  color: var(--sage-dark);
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 400;
+}
 
 .event-card p:not(.event-kicker) {
   color: #9b8980;
@@ -871,8 +881,11 @@ section {
 }
 
 .venue-icon {
+  display: block;
+  margin: 0 auto 15px;
   color: var(--sage-dark);
   font-size: 34px;
+  text-align: center;
 }
 
 .venue-card h3 {
@@ -1148,4 +1161,282 @@ section {
   color: var(--sage-dark);
   display: inline-block;
   vertical-align: middle;
+}
+/* BEAUTIFUL WEDDING CLOSING PAGE */
+
+.footer-section {
+  position: relative;
+  min-height: 90vh;
+  padding: 100px 22px 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      #f0f5e9,
+      transparent 75%
+    ),
+    #e2ead8;
+
+  color: var(--sage-dark);
+  border-top: 5px double var(--gold);
+}
+
+.footer-flowers {
+  margin-bottom: 25px;
+  color: var(--gold);
+  font-size: 55px;
+  letter-spacing: 12px;
+}
+
+.footer-section .mini-label {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+
+.footer-section h2 {
+  margin: 22px 0;
+  color: var(--sage-dark);
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(48px, 11vw, 82px);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.footer-section h2 span {
+  color: var(--gold);
+}
+
+.footer-date {
+  margin: 10px 0;
+  color: var(--sage-dark);
+  font-size: 15px;
+  letter-spacing: 5px;
+}
+
+.footer-section .floral-line {
+  margin: 25px auto;
+}
+
+.footer-message {
+  margin: 15px 0;
+  color: var(--sage-dark);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 27px;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.footer-thanks {
+  max-width: 340px;
+  margin: 18px auto;
+  color: #95847a;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.footer-heart {
+  margin: 22px 0;
+  color: var(--rose);
+  font-size: 25px;
+}
+
+.footer-blessing {
+  margin-top: 8px;
+  color: var(--gold);
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
+}
+
+/* FLORAL WEDDING CLOSING PAGE */
+
+.footer-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 85px 22px 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      #f3f7ed,
+      transparent 75%
+    ),
+    #e2ead8;
+
+  color: var(--sage-dark);
+  border-top: 5px double var(--gold);
+}
+
+.footer-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 35px;
+  color: var(--gold);
+  font-size: 38px;
+}
+
+.footer-ornament .ornament-heart {
+  font-size: 52px;
+  line-height: 1;
+}
+
+.footer-section .mini-label {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.footer-section h2 {
+  margin: 25px 0;
+  color: var(--sage-dark);
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(48px, 11vw, 82px);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.footer-section h2 span {
+  color: var(--gold);
+}
+
+.footer-date {
+  margin: 10px 0;
+  color: var(--sage-dark);
+  font-size: 16px;
+  letter-spacing: 5px;
+}
+
+.footer-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px auto;
+  color: var(--gold);
+}
+
+.footer-divider span {
+  width: 65px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.footer-divider b {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.footer-message {
+  margin: 20px 0;
+  color: var(--sage-dark);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 29px;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.footer-thanks {
+  max-width: 350px;
+  margin: 20px auto;
+  color: #95847a;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.footer-heart {
+  margin: 25px 0;
+  color: var(--rose);
+  font-size: 28px;
+}
+
+.footer-blessing {
+  margin: 10px 0;
+  color: var(--gold);
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+}
+
+.footer-bottom-ornament {
+  margin-top: 25px;
+  color: var(--gold);
+  font-size: 27px;
+  letter-spacing: 10px;
+}
+
+@media (max-width: 600px) {
+  .footer-section {
+    min-height: 90vh;
+    padding: 70px 18px;
+  }
+
+  .footer-ornament {
+  margin-bottom: 35px;
+  color: var(--gold);
+  font-size: 48px;
+  text-align: center;
+}
+
+  .footer-ornament .ornament-heart {
+    font-size: 43px;
+  }
+
+  .footer-section h2 {
+    font-size: clamp(43px, 11vw, 58px);
+  }
+
+  .footer-message {
+    font-size: 25px;
+  }
+
+  .footer-thanks {
+    font-size: 18px;
+  }
+}
+/* SIDE FLORAL DECORATIONS */
+
+.footer-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-floral {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.footer-floral img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+
+/* Keep footer text above flowers */
+
+.footer-section > *:not(.footer-floral) {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .footer-floral {
+    width: 125px;
+  }
 }

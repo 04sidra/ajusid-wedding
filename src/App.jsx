@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaHeart, FaLocationDot, FaCalendarDays } from "react-icons/fa6";
 import "./App.css";
 
-const weddingDate = new Date("2026-12-19T10:00:00");
+const weddingDate = new Date("2026-12-19T11:00:00");
 
 const mapLink =
   "https://www.google.com/maps/dir//TKH+Auditorium,+VWQM%2BVJ9,+Kattachira+Rd,+Tirur,+Talakkad,+Keralam+676102/@10.8241309,75.936384,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba7b1b0048238db:0xf1dad0b1ab4c0b23!2m2!1d75.9340934!2d10.8897107?entry=ttu";
@@ -97,15 +97,34 @@ function ScratchCard() {
     context.textAlign = "center";
     context.textBaseline = "middle";
 
-    context.font = "30px Georgia";
-    context.fillText("❦", width / 2, height / 2 - 35);
+    const drawHeart = (x, y, size) => {
+  context.beginPath();
+  context.moveTo(x, y + size * 0.3);
+  context.bezierCurveTo(
+    x - size * 1.2, y - size * 0.5,
+    x - size * 0.7, y - size * 1.1,
+    x, y - size * 0.4
+  );
+  context.bezierCurveTo(
+    x + size * 0.7, y - size * 1.1,
+    x + size * 1.2, y - size * 0.5,
+    x, y + size * 0.3
+  );
+  context.stroke();
+};
+
+context.strokeStyle = "#788d68";
+context.lineWidth = 2.5;
+
+drawHeart(width / 2 - 12, height / 2 - 25, 20);
+drawHeart(width / 2 + 12, height / 2 - 38, 20);
 
     context.font = "italic 24px Georgia";
-    context.fillText("Scratch to Reveal", width / 2, height / 2 + 5);
+    // context.fillText("Scratch to Reveal", width / 2, height / 2 + 5);
 
     context.font = "13px Georgia";
     context.fillText(
-      "Discover our special day",
+      "A date to cherish, a love to celebrate",
       width / 2,
       height / 2 + 38
     );
@@ -255,13 +274,13 @@ function ScratchCard() {
         />
       )}
 
-      {!revealed && (
+      {/* {!revealed && (
         <p className="scratch-tip">
           {started
             ? "Keep scratching..."
             : "Scratch with your finger or mouse"}
         </p>
-      )}
+      )} */}
     </div>
   );
 }
@@ -306,7 +325,7 @@ function CurtainOpening({ onComplete }) {
 </h1>
         <FloralLine />
 
-        <p className="curtain-date">19 · 12 · 2026</p>
+        {/* <p className="curtain-date">19 · 12 · 2026</p> */}
 
         <button onClick={openCurtains} disabled={opening}>
           {opening ? "Welcome..." : "Tap to Open"} ♡
@@ -330,11 +349,11 @@ function App() {
       {!showWebsite && !showCurtain && (
         <section className="intro-screen">
           <div className="intro-card">
-
+          
             <p className="mini-label">
               You are cordially invited
             </p>
-
+            
             <div
               className="intro-emblem"
               aria-label="Sidra and Ajmal monogram"
@@ -343,7 +362,7 @@ function App() {
               <span className="initial-amp">&amp;</span>
               <span className="initial-a">A</span>
             </div>
-
+            
             <p className="intro-script">
               The Blessed Beginning
             </p>
@@ -353,16 +372,16 @@ function App() {
               we invite you to join us as we begin
               our beautiful journey together.
             </p>
-
             <h1>
               Sidra <span>&amp;</span> Ajmal
             </h1>
+           
 
             <FloralLine />
 
-            <p className="intro-date">
+            {/* <p className="intro-date">
               19 December 2026
-            </p>
+            </p> */}
 
             <button
               className="intro-button"
@@ -411,17 +430,18 @@ function App() {
             <FloralLine />
 
             <p className="hero-copy">
-              Two hearts, two families, one beautiful journey.
+              One hearts, two families, one beautiful journey.
               <br />
               We request the pleasure of your company.
             </p>
 
             <p className="hero-date">
-              <FaCalendarDays />
-              Saturday, 19 December 2026
+              {/* <FaCalendarDays /> */}
+              {/* Saturday, 19 December 2026 */}
             </p>
 
             <a className="scroll-cue" href="#invitation">
+              
               Scroll to explore ↓
             </a>
           </header>
@@ -438,7 +458,7 @@ function App() {
             </h2>
 
             <p className="section-copy">
-              Gently scratch the card to discover our special day.
+              Scratch gently to reveal the date of our forever beginning.
             </p>
 
             <ScratchCard />
@@ -578,7 +598,7 @@ function App() {
             <h2 className="section-heading">
               Together, Always
             </h2>
-
+            
             <div className="large-couple-photo">
               <img
                 src="/couple-back.jpg"
@@ -599,24 +619,20 @@ function App() {
             </p>
 
             <h2 className="section-heading">
-              Our Wedding Day
+              Nikah Ceremony
             </h2>
 
             <FloralLine />
 
             <div className="event-card">
-              <p className="event-kicker">
-                THE WEDDING CELEBRATION
-              </p>
+  <p className="event-kicker">
+    THE NIKAH
+  </p>
 
-              <h3>Sidra &amp; Ajmal</h3>
+  <h3 className="nikah-time">11:00 AM</h3>
 
-              <p>Saturday · 19 December 2026</p>
-
-              <p>11:00 AM</p>
-
-              <div className="event-flower">✿</div>
-            </div>
+  <div className="event-flower">♥</div>
+</div>
           </section>
 
           {/* VENUE */}
@@ -656,9 +672,7 @@ function App() {
                 View on Google Maps
               </a>
 
-              <p className="venue-date">
-                Saturday · 19 December 2026
-              </p>
+              
             </div>
           </section>
 
@@ -688,29 +702,56 @@ function App() {
 
           {/* FOOTER */}
 
-          <footer className="footer-section">
-            <div className="footer-flowers">
-              ✿ ❦ ✿
-            </div>
+          
+<footer className="footer-section">
+<div className="footer-floral">
+  <img src="/footer-flower.png" alt="" />
+</div>
+  {/* Top floral decoration */}
+  <div className="footer-ornament">
+  ༺ ♡ ༻
+</div>
 
-            <p className="mini-label">
-              We can't wait to celebrate with you
-            </p>
+  <p className="mini-label">
+    WITH LOVE, DUAS & GRATITUDE
+  </p>
 
-            <h2>
-              Sidra <span>&amp;</span> Ajmal
-            </h2>
+  <h2>
+    Sidra <span>&amp;</span> Ajmal
+  </h2>
 
-            <p className="footer-date">
-              19 · 12 · 2026
-            </p>
+  {/* <p className="footer-date">
+    19 · 12 · 2026
+  </p> */}
 
-            <FloralLine />
+  <div className="footer-divider">
+    <span></span>
+    <b>♥</b>
+    <span></span>
+  </div>
 
-            <p>With love, duas and gratitude</p>
+  <p className="footer-message">
+    One soul, one journey,
+    <br />
+    a lifetime of love.
+  </p>
 
-            <FaHeart className="footer-heart" />
-          </footer>
+  <p className="footer-thanks">
+    Thank you for being part of our special day.
+  </p>
+
+  <FaHeart className="footer-heart" />
+
+  <p className="footer-blessing">
+    Forever begins with love ♡
+  </p>
+
+  <div className="footer-bottom-ornament">
+    {/* ❧ ❦ ❧img  */}
+  </div>
+
+</footer>
+
 
         </div>
       )}
