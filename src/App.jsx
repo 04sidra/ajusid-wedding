@@ -246,19 +246,37 @@ drawHeart(width / 2 + 12, height / 2 - 38, 20);
   return (
     <div className="scratch-card">
       <div className="scratch-under">
-        <p className="tiny-heading">Save the date</p>
+        
 
-        <div className="scratch-day">19</div>
+<section className="save-date-section">
+  <div className="save-date-content">
 
-        <p className="scratch-month">
-          SATURDAY · DECEMBER · 2026
-        </p>
+    <p className="save-date-label">
+      SAVE THE DATE
+    </p>
 
-        <FloralLine />
+    <h1 className="save-date-number">19</h1>
 
-        <h3>Sidra &amp; Ajmal</h3>
+    <p className="save-date-details">
+      SATURDAY <span>·</span> DECEMBER <span>·</span> 2026
+    </p>
 
-        <p>Our wedding celebration</p>
+    <div className="save-date-divider">
+      <span></span>
+      <span className="save-date-heart">♥</span>
+      <span></span>
+    </div>
+
+    <p className="save-date-message">
+      Our wedding celebration
+    </p>
+
+  </div>
+</section>
+
+
+
+
       </div>
 
       {!revealed && (

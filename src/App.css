@@ -544,9 +544,12 @@ section {
    INVITATION / SCRATCH CARD
 ================================= */
 
+
 .invitation-section {
-  background: var(--blush);
+  padding: 0;
+  background: var(--pista-light);
 }
+
 
 .section-copy {
   color: #a08b81;
@@ -554,16 +557,19 @@ section {
   line-height: 1.7;
 }
 
+
 .scratch-card {
   position: relative;
-  width: min(460px, 100%);
-  height: 330px;
-  margin: 38px auto;
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  margin: 0 auto;
   overflow: hidden;
-  border: 2px solid var(--gold);
-  background: var(--ivory);
-  box-shadow: 0 12px 35px rgba(57, 76, 45, .08);
+  border: none;
+  background: var(--pista-light);
+  box-shadow: none;
 }
+
 
 .scratch-under {
   position: absolute;
@@ -1438,5 +1444,263 @@ section {
 @media (max-width: 600px) {
   .footer-floral {
     width: 125px;
+  }
+}
+
+.save-date-section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 50px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+   border: 3px solid var(--gold);
+
+  background: radial-gradient(
+    ellipse at center,
+    #f7f8ef,
+    #e5eddb
+  );
+
+  border: 2px solid var(--gold);
+}
+
+.save-date-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.save-date-label {
+  margin: 0 0 45px;
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  letter-spacing: 8px;
+}
+
+.save-date-number {
+  margin: 0;
+  color: var(--sage-dark);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(120px, 22vw, 180px);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.save-date-details {
+  margin: 25px 0 65px;
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(14px, 3vw, 22px);
+  letter-spacing: 5px;
+}
+
+.save-date-details span {
+  padding: 0 8px;
+}
+
+.save-date-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.save-date-divider span:not(.save-date-heart) {
+  width: 125px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.save-date-heart {
+  color: var(--gold);
+  font-size: 30px;
+}
+
+.save-date-message {
+  margin-top: 75px;
+  color: var(--sage-dark);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(27px, 5vw, 42px);
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .save-date-section {
+    min-height: 90vh;
+    padding: 35px 15px;
+  }
+
+  .save-date-label {
+    font-size: 14px;
+    letter-spacing: 5px;
+  }
+
+  .save-date-details {
+    letter-spacing: 2px;
+  }
+
+  .save-date-divider {
+    gap: 20px;
+  }
+
+  .save-date-divider span:not(.save-date-heart) {
+    width: 75px;
+  }
+
+  .save-date-message {
+    margin-top: 55px;
+  }
+}
+/* SAVE DATE ALIGNMENT FIX */
+
+/* =================================
+   SAVE THE DATE - FINAL FIX
+================================= */
+
+.scratch-card {
+  position: relative;
+  width: min(460px, 100%);
+  height: 330px;
+  min-height: 0;
+  margin: 38px auto;
+  overflow: hidden;
+  border: 2px solid var(--gold);
+  background: var(--ivory);
+  box-shadow: 0 12px 35px rgba(57, 76, 45, .08);
+}
+
+.scratch-under {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #fffef8, #e8f0df);
+}
+
+.save-date-section {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: none;
+  text-align: center;
+  background: radial-gradient(circle at center, #fffef8, #e8f0df);
+}
+
+.save-date-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.save-date-label {
+  margin: 0 0 8px;
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+.save-date-number {
+  margin: 0;
+  color: var(--sage-dark);
+  font-family: 'Playfair Display', serif;
+  font-size: 100px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.save-date-details {
+  margin: 10px 0 18px;
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.save-date-details span {
+  padding: 0 3px;
+}
+
+.save-date-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.save-date-divider span:not(.save-date-heart) {
+  width: 68px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.save-date-heart {
+  color: var(--gold);
+  font-size: 20px;
+}
+
+.save-date-message {
+  margin: 17px 0 0;
+  color: var(--sage-dark);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-style: italic;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+  .scratch-card {
+    width: 100%;
+    height: 310px;
+    min-height: 0;
+    margin: 30px auto;
+  }
+
+  .save-date-section {
+    padding: 10px;
+  }
+
+  .save-date-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+  }
+
+  .save-date-number {
+    font-size: 90px;
+  }
+
+  .save-date-details {
+    font-size: 11px;
+    letter-spacing: .5px;
+  }
+
+  .save-date-divider {
+    gap: 12px;
+  }
+
+  .save-date-divider span:not(.save-date-heart) {
+    width: 60px;
+  }
+
+  .save-date-message {
+    margin-top: 15px;
+    font-size: 23px;
   }
 }
