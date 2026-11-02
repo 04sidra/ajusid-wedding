@@ -1791,3 +1791,48 @@ section {
     line-height: 1.6;
   }
 }
+/* =================================
+   DESKTOP FOOTER FLORAL FIX
+================================= */
+
+.footer-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.footer-floral {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.footer-floral img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0.75;
+}
+
+.footer-section > *:not(.footer-floral) {
+  position: relative;
+  z-index: 2;
+}
+
+/* Keep mobile design unchanged */
+@media (max-width: 600px) {
+  .footer-floral {
+    width: 65px;
+    height: 100%;
+    opacity: 0.55;
+  }
+
+  .footer-floral img {
+    object-fit: cover;
+    object-position: left center;
+  }
+}
