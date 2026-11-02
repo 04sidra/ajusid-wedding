@@ -1751,3 +1751,43 @@ section {
     font-size: clamp(40px, 10vw, 55px);
   }
 }
+/* FINAL MOBILE FOOTER SPACING */
+
+@media (max-width: 600px) {
+  .footer-section {
+    padding: 65px 18px;
+  }
+
+  .footer-floral {
+    width: 65px;
+    opacity: 0.55;
+  }
+
+  .footer-floral img {
+    object-fit: cover;
+    object-position: left center;
+  }
+
+  .footer-section .mini-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .footer-section h2 {
+    font-size: clamp(38px, 9vw, 50px);
+  }
+
+  .footer-section .footer-message {
+    max-width: 330px;
+    margin: 20px auto;
+    font-size: 25px;
+    line-height: 1.6;
+  }
+
+  .footer-section .footer-thanks {
+    max-width: 330px;
+    margin: 18px auto;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
