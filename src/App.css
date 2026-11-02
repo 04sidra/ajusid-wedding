@@ -1411,11 +1411,14 @@ section {
     font-size: 18px;
   }
 }
-/* SIDE FLORAL DECORATIONS */
+/* =================================
+   FOOTER FLORAL - FINAL RESPONSIVE
+================================= */
 
 .footer-section {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .footer-floral {
@@ -1428,10 +1431,58 @@ section {
 }
 
 .footer-floral img {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68%;
+  height: 68%;
+  object-fit: contain;
+  object-position: center;
   display: block;
+}
+
+.footer-section > *:not(.footer-floral) {
+  position: relative;
+  z-index: 2;
+}
+
+/* MOBILE VIEW - KEEP CURRENT DESIGN */
+
+@media (max-width: 600px) {
+  .footer-floral {
+    width: 65px;
+    height: 100%;
+  }
+
+  .footer-floral img {
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+  }
+
+  .footer-section {
+    min-height: 100vh;
+    padding: 65px 18px;
+  }
+
+  .footer-section .footer-message {
+    max-width: 330px;
+    margin: 20px auto;
+    font-size: 25px;
+    line-height: 1.6;
+  }
+
+  .footer-section .footer-thanks {
+    max-width: 330px;
+    margin: 18px auto;
+    font-size: 18px;
+    line-height: 1.6;
+  }
 }
 
 /* Keep footer text above flowers */
