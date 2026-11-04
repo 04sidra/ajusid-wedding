@@ -55,7 +55,18 @@ function ScratchCard() {
   const moveCount = useRef(0);
 
   const [revealed, setRevealed] = useState(false);
+  useEffect(() => {
+  if (revealed) {
+    const timer = setTimeout(() => {
+      document.getElementById("countdown")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 700);
 
+    return () => clearTimeout(timer);
+  }
+}, [revealed]);
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -471,7 +482,8 @@ function App() {
 
           {/* COUNTDOWN */}
 
-          <section className="countdown-section">
+          <section className="countdown-section" id="countdown">
+            
             <p className="mini-label">
               The celebration is getting closer
             </p>
