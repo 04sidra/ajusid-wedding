@@ -330,9 +330,9 @@ function CurtainOpening({ onComplete }) {
       <div className="curtain-invitation">
         <p className="mini-label">Together with our families</p>
 
-        <p className="curtain-monogram">
+        {/* <p className="curtain-monogram">
           S <i>&amp;</i> A
-        </p>
+        </p> */}
 
         <h1 className="curtain-couple-name">
           Sidra <span>&amp;</span> Ajmal
@@ -351,15 +351,15 @@ function CurtainOpening({ onComplete }) {
 }
 
 function App() {
-  const [showCurtain, setShowCurtain] = useState(false);
-  const [showWebsite, setShowWebsite] = useState(false);
-
+  const [showCurtain, setShowCurtain] = useState(true);
+const [showIntro, setShowIntro] = useState(false);
+const [showWebsite, setShowWebsite] = useState(false);
   return (
     <main className="wedding-page">
       {/* FIRST INVITATION SCREEN */}
 
-      {!showWebsite && !showCurtain && (
-        <section className="intro-screen">
+{showIntro && !showWebsite && (
+          <section className="intro-screen">
           <div className="intro-card">
             <p className="mini-label">
               You are cordially invited
@@ -384,15 +384,18 @@ function App() {
               our beautiful journey together.
             </p>
 
-            <h1 className="invitation-couple-name">
+            {/* <h1 className="invitation-couple-name">
               Sidra <span>&amp;</span> Ajmal
-            </h1>
+            </h1> */}
 
             <FloralLine />
 
             <button
               className="intro-button"
-              onClick={() => setShowCurtain(true)}
+              onClick={() => {
+  setShowIntro(false);
+  setShowWebsite(true);
+}}
             >
               Open Invitation ♡
             </button>
@@ -405,10 +408,13 @@ function App() {
       {/* CURTAIN OPENING */}
 
       {showCurtain && !showWebsite && (
-        <CurtainOpening
-          onComplete={() => setShowWebsite(true)}
-        />
-      )}
+  <CurtainOpening
+    onComplete={() => {
+      setShowCurtain(false);
+      setShowIntro(true);
+    }}
+  />
+)}
 
       {/* MAIN WEDDING WEBSITE */}
 
