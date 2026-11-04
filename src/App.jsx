@@ -437,7 +437,7 @@ function App() {
   </p>
 </div>
 
-            <p className="mini-label">
+            {/* <p className="mini-label">
               A beautiful beginning
             </p>
 
@@ -453,11 +453,11 @@ function App() {
               We request the pleasure of your company.
             </p>
 
-            <p className="hero-date"></p>
+            <p className="hero-date"></p>*/}
 
             <a className="scroll-cue" href="#invitation">
               Scroll to explore ↓
-            </a>
+            </a> 
           </header>
 
           {/* SCRATCH CARD */}

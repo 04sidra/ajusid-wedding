@@ -2007,3 +2007,135 @@ html {
     scroll-snap-align: start;
   }
 }
+/* Save Date card alignment */
+.save-date-content {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 25px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.save-date-label {
+  margin: 0 !important;
+  line-height: 1.5;
+  letter-spacing: 4px;
+}
+
+.save-date-content .section-heading {
+  margin: 0 !important;
+  line-height: 1.2;
+}
+
+.save-date-details {
+  margin: 0 !important;
+  line-height: 1.6;
+  letter-spacing: 2px;
+}
+
+.save-date-number {
+  margin: 8px 0 !important;
+  line-height: 1.1;
+  font-size: clamp(42px, 8vw, 60px);
+}
+
+.save-date-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 0 auto !important;
+}
+
+.save-date-message {
+  margin: 0 !important;
+  line-height: 1.5;
+}
+
+/* Keep content inside the border */
+.scratch-under {
+  overflow: hidden;
+}
+
+.save-date-section {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+/* Final Save Date card alignment */
+.scratch-card {
+  height: 270px !important;
+  width: min(420px, 88%) !important;
+}
+
+.scratch-under {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.save-date-section {
+  width: 100%;
+  height: 100%;
+  padding: 8px !important;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.save-date-content {
+  width: 100%;
+  height: 100%;
+  padding: 10px 8px !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px !important;
+  text-align: center;
+}
+
+.save-date-label {
+  font-size: 10px !important;
+  letter-spacing: 3px;
+  margin: 0 !important;
+}
+
+.save-date-content .section-heading {
+  font-size: 27px !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+}
+
+.save-date-details {
+  font-size: 9px !important;
+  letter-spacing: 2px;
+  margin: 0 !important;
+}
+
+.save-date-number {
+  font-size: 48px !important;
+  line-height: 1.1 !important;
+  margin: 5px 0 !important;
+}
+
+.save-date-divider {
+  margin: 0 !important;
+}
+
+.save-date-message {
+  font-size: 17px !important;
+  margin: 0 !important;
+  line-height: 1.3 !important;
+}
