@@ -1901,3 +1901,30 @@ h1.invitation-couple-name {
 .footer-blessing {
   margin: 5px 0 0 !important;
 }
+/* Full-screen sections */
+.website-content > section,
+.website-content > header,
+.website-content > footer {
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile adjustment */
+@media (max-width: 600px) {
+  .website-content > section,
+  .website-content > header,
+  .website-content > footer {
+    min-height: 100svh;
+    padding: 45px 18px;
+  }
+}
