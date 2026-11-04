@@ -1,6 +1,5 @@
-
 import { useEffect, useRef, useState } from "react";
-import { FaHeart, FaLocationDot, FaCalendarDays } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
 import "./App.css";
 
 const weddingDate = new Date("2026-12-19T11:00:00");
@@ -56,7 +55,6 @@ function ScratchCard() {
   const moveCount = useRef(0);
 
   const [revealed, setRevealed] = useState(false);
-  const [started, setStarted] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -98,29 +96,32 @@ function ScratchCard() {
     context.textBaseline = "middle";
 
     const drawHeart = (x, y, size) => {
-  context.beginPath();
-  context.moveTo(x, y + size * 0.3);
-  context.bezierCurveTo(
-    x - size * 1.2, y - size * 0.5,
-    x - size * 0.7, y - size * 1.1,
-    x, y - size * 0.4
-  );
-  context.bezierCurveTo(
-    x + size * 0.7, y - size * 1.1,
-    x + size * 1.2, y - size * 0.5,
-    x, y + size * 0.3
-  );
-  context.stroke();
-};
+      context.beginPath();
+      context.moveTo(x, y + size * 0.3);
+      context.bezierCurveTo(
+        x - size * 1.2,
+        y - size * 0.5,
+        x - size * 0.7,
+        y - size * 1.1,
+        x,
+        y - size * 0.4
+      );
+      context.bezierCurveTo(
+        x + size * 0.7,
+        y - size * 1.1,
+        x + size * 1.2,
+        y - size * 0.5,
+        x,
+        y + size * 0.3
+      );
+      context.stroke();
+    };
 
-context.strokeStyle = "#788d68";
-context.lineWidth = 2.5;
+    context.strokeStyle = "#788d68";
+    context.lineWidth = 2.5;
 
-drawHeart(width / 2 - 12, height / 2 - 25, 20);
-drawHeart(width / 2 + 12, height / 2 - 38, 20);
-
-    context.font = "italic 24px Georgia";
-    // context.fillText("Scratch to Reveal", width / 2, height / 2 + 5);
+    drawHeart(width / 2 - 12, height / 2 - 25, 20);
+    drawHeart(width / 2 + 12, height / 2 - 38, 20);
 
     context.font = "13px Georgia";
     context.fillText(
@@ -185,8 +186,6 @@ drawHeart(width / 2 + 12, height / 2 - 38, 20);
     moveCount.current = 0;
     lastPoint.current = getPosition(event);
 
-    setStarted(true);
-
     if (event.currentTarget.setPointerCapture) {
       event.currentTarget.setPointerCapture(event.pointerId);
     }
@@ -246,37 +245,35 @@ drawHeart(width / 2 + 12, height / 2 - 38, 20);
   return (
     <div className="scratch-card">
       <div className="scratch-under">
-        
+        <section className="save-date-section">
+          <div className="save-date-content">
+            <p className="save-date-label">
+              THE CELEBRATION
+            </p>
 
-<section className="save-date-section">
-  <div className="save-date-content">
+            <h2 className="section-heading">
+              Nikah Ceremony
+            </h2>
 
-    <p className="save-date-label">
-      SAVE THE DATE
-    </p>
+            <p className="save-date-details">
+              SATURDAY <span>·</span> 19 DECEMBER <span>·</span> 2026
+            </p>
 
-    <h1 className="save-date-number">19</h1>
+            <h1 className="save-date-number">
+              11:00 AM
+            </h1>
 
-    <p className="save-date-details">
-      SATURDAY <span>·</span> DECEMBER <span>·</span> 2026
-    </p>
+            <div className="save-date-divider">
+              <span></span>
+              <span className="save-date-heart">♥</span>
+              <span></span>
+            </div>
 
-    <div className="save-date-divider">
-      <span></span>
-      <span className="save-date-heart">♥</span>
-      <span></span>
-    </div>
-
-    <p className="save-date-message">
-      Our wedding celebration
-    </p>
-
-  </div>
-</section>
-
-
-
-
+            <p className="save-date-message">
+              A beautiful beginning
+            </p>
+          </div>
+        </section>
       </div>
 
       {!revealed && (
@@ -291,14 +288,6 @@ drawHeart(width / 2 + 12, height / 2 - 38, 20);
           onLostPointerCapture={stopScratch}
         />
       )}
-
-      {/* {!revealed && (
-        <p className="scratch-tip">
-          {started
-            ? "Keep scratching..."
-            : "Scratch with your finger or mouse"}
-        </p>
-      )} */}
     </div>
   );
 }
@@ -334,16 +323,11 @@ function CurtainOpening({ onComplete }) {
           S <i>&amp;</i> A
         </p>
 
-        {/* <h1>
+        <h1 className="curtain-couple-name">
           Sidra <span>&amp;</span> Ajmal
-        </h1> */}
-        <h1>
-  Sidra <span>&amp;</span>{" "}
-  <span className="groom-name">Ajmal</span>
-</h1>
-        <FloralLine />
+        </h1>
 
-        {/* <p className="curtain-date">19 · 12 · 2026</p> */}
+        <FloralLine />
 
         <button onClick={openCurtains} disabled={opening}>
           {opening ? "Welcome..." : "Tap to Open"} ♡
@@ -361,17 +345,15 @@ function App() {
 
   return (
     <main className="wedding-page">
-
       {/* FIRST INVITATION SCREEN */}
 
       {!showWebsite && !showCurtain && (
         <section className="intro-screen">
           <div className="intro-card">
-          
             <p className="mini-label">
               You are cordially invited
             </p>
-            
+
             <div
               className="intro-emblem"
               aria-label="Sidra and Ajmal monogram"
@@ -380,7 +362,7 @@ function App() {
               <span className="initial-amp">&amp;</span>
               <span className="initial-a">A</span>
             </div>
-            
+
             <p className="intro-script">
               The Blessed Beginning
             </p>
@@ -390,16 +372,12 @@ function App() {
               we invite you to join us as we begin
               our beautiful journey together.
             </p>
-            <h1>
+
+            <h1 className="invitation-couple-name">
               Sidra <span>&amp;</span> Ajmal
             </h1>
-           
 
             <FloralLine />
-
-            {/* <p className="intro-date">
-              19 December 2026
-            </p> */}
 
             <button
               className="intro-button"
@@ -408,10 +386,7 @@ function App() {
               Open Invitation ♡
             </button>
 
-            <div className="rose-border">
-             
-            </div>
-
+            <div className="rose-border"></div>
           </div>
         </section>
       )}
@@ -428,7 +403,6 @@ function App() {
 
       {showWebsite && (
         <div className="website-content website-visible">
-
           <header className="hero-section">
             <div className="corner-flower corner-one">❀</div>
             <div className="corner-flower corner-two">❀</div>
@@ -441,7 +415,7 @@ function App() {
               A beautiful beginning
             </p>
 
-            <h1>
+            <h1 className="hero-couple-name">
               Sidra <span>&amp;</span> Ajmal
             </h1>
 
@@ -453,13 +427,9 @@ function App() {
               We request the pleasure of your company.
             </p>
 
-            <p className="hero-date">
-              {/* <FaCalendarDays /> */}
-              {/* Saturday, 19 December 2026 */}
-            </p>
+            <p className="hero-date"></p>
 
             <a className="scroll-cue" href="#invitation">
-              
               Scroll to explore ↓
             </a>
           </header>
@@ -544,7 +514,6 @@ function App() {
             <FloralLine />
 
             <div className="people-grid">
-
               <article className="person-card">
                 <div className="person-photo">
                   <img
@@ -555,7 +524,7 @@ function App() {
 
                 <p className="mini-label">The Bride</p>
 
-                <h3>Sidra</h3>
+                <h3 className="bride-name">Sidra</h3>
 
                 <p>Daughter of</p>
 
@@ -584,7 +553,7 @@ function App() {
 
                 <p className="mini-label">The Groom</p>
 
-                <h3>Ajmal</h3>
+                <h3 className="groom-name">Ajmal</h3>
 
                 <p>Son of</p>
 
@@ -602,7 +571,6 @@ function App() {
                   Ewan &amp; Hadhi
                 </p>
               </article>
-
             </div>
           </section>
 
@@ -616,7 +584,7 @@ function App() {
             <h2 className="section-heading">
               Together, Always
             </h2>
-            
+
             <div className="large-couple-photo">
               <img
                 src="/couple-back.jpg"
@@ -627,30 +595,6 @@ function App() {
             <p className="photo-caption">
               A lifetime of love begins here.
             </p>
-          </section>
-
-          {/* WEDDING DAY */}
-
-          <section className="event-section">
-            <p className="mini-label">
-              The celebration
-            </p>
-
-            <h2 className="section-heading">
-              Nikah Ceremony
-            </h2>
-
-            <FloralLine />
-
-            <div className="event-card">
-  <p className="event-kicker">
-    THE NIKAH
-  </p>
-
-  <h3 className="nikah-time">11:00 AM</h3>
-
-  <div className="event-flower">♥</div>
-</div>
           </section>
 
           {/* VENUE */}
@@ -689,8 +633,6 @@ function App() {
                 <FaLocationDot />
                 View on Google Maps
               </a>
-
-              
             </div>
           </section>
 
@@ -718,62 +660,23 @@ function App() {
             </p>
           </section>
 
-          {/* FOOTER */}
+          {/* FINAL WEDDING MESSAGE */}
 
-          
-<footer className="footer-section">
-<div className="footer-floral">
-  <img src="/footer-flower.png" alt="" />
-</div>
-  {/* Top floral decoration */}
-  <div className="footer-ornament">
-  ༺ ♡ ༻
-</div>
+          <footer className="footer-section">
+            <p className="mini-label">
+              WITH LOVE, DUAS &amp; GRATITUDE
+            </p>
 
-  <p className="mini-label">
-    WITH LOVE, DUAS & GRATITUDE
-  </p>
+            <p className="footer-thanks">
+              Thank you for being part of our special day.
+            </p>
 
-  <h2>
-    Sidra <span>&amp;</span> Ajmal
-  </h2>
-
-  {/* <p className="footer-date">
-    19 · 12 · 2026
-  </p> */}
-
-  <div className="footer-divider">
-    <span></span>
-    <b>♥</b>
-    <span></span>
-  </div>
-
-  <p className="footer-message">
-    One soul, one journey,
-    <br />
-    a lifetime of love.
-  </p>
-
-  <p className="footer-thanks">
-    Thank you for being part of our special day.
-  </p>
-
-  <FaHeart className="footer-heart" />
-
-  <p className="footer-blessing">
-    Forever begins with love ♡
-  </p>
-
-  <div className="footer-bottom-ornament">
-    {/* ❧ ❦ ❧img  */}
-  </div>
-
-</footer>
-
-
+            <p className="footer-blessing">
+              Forever begins with love ♡
+            </p>
+          </footer>
         </div>
       )}
-
     </main>
   );
 }

@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 /* =================================
    PASTEL PISTA GREEN COLOR PALETTE
 ================================= */
@@ -959,458 +959,52 @@ section {
 }
 
 /* =================================
-   FOOTER
+   SAME FLORAL FOOTER ON ALL SCREENS
 ================================= */
-
-.footer-section {
-  padding: 75px 22px;
-  background: #e2ead8;
-  color: var(--sage-dark);
-  text-align: center;
-  border-top: 5px double var(--gold);
-}
-
-.footer-flowers {
-  color: var(--gold);
-  font-size: 35px;
-}
-
-.footer-section h2 {
-  margin: 18px 0;
-  color: var(--sage-dark);
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(36px, 10vw, 72px);
-  font-weight: 400;
-  white-space: nowrap;
-}
-
-.footer-section h2 span {
-  color: var(--gold);
-}
-
-.footer-date {
-  color: var(--sage-dark);
-  font-size: 15px;
-  letter-spacing: 4px;
-}
-
-.footer-section > p:last-of-type {
-  font-size: 18px;
-}
-
-.footer-heart {
-  margin-top: 22px;
-  color: var(--rose);
-  font-size: 20px;
-}
-
-/* =================================
-   MOBILE RESPONSIVE
-================================= */
-
-@media (max-width: 600px) {
-  section {
-    padding: 70px 18px;
-  }
-
-  .intro-card {
-    min-height: 86vh;
-    padding: 35px 20px 60px;
-  }
-
-  .intro-emblem {
-    width: 130px;
-    height: 130px;
-    margin: 15px auto 25px;
-  }
-
-  .initial-s {
-    top: 6px;
-    left: 25px;
-    font-size: 67px;
-  }
-
-  .initial-amp {
-    top: 51px;
-    left: 53px;
-    font-size: 33px;
-  }
-
-  .initial-a {
-    right: 15px;
-    bottom: 3px;
-    font-size: 62px;
-  }
-
-  .intro-card h1 {
-    font-size: clamp(36px, 12vw, 54px);
-  }
-
-  .intro-copy {
-    font-size: 18px;
-  }
-
-  .intro-script {
-    font-size: 31px;
-    line-height: 1.4;
-  }
-
-  .curtain-invitation h1 {
-    font-size: clamp(36px, 11vw, 54px);
-  }
-
-  .arabic {
-    font-size: 25px;
-  }
-
-  .hero-section h1 {
-    font-size: clamp(42px, 13vw, 64px);
-  }
-
-  .hero-copy {
-    font-size: 19px;
-  }
-
-  .people-grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
-  .countdown {
-    gap: 7px;
-  }
-
-  .countdown-cell {
-    min-height: 85px;
-  }
-
-  .countdown-cell strong {
-    font-size: 28px;
-  }
-
-  .countdown-cell span {
-    font-size: 9px;
-    letter-spacing: .5px;
-  }
-
-  .person-photo {
-    width: 200px;
-    height: 200px;
-  }
-
-  .person-card h3 {
-    font-size: 49px;
-  }
-
-  .large-couple-photo {
-    height: 430px;
-  }
-
-  .scratch-card {
-    height: 310px;
-  }
-
-  .scratch-day {
-    font-size: 72px;
-  }
-
-  .scratch-under h3 {
-    font-size: 38px;
-  }
-
-  .venue-card {
-    padding: 32px 18px;
-  }
-}
-
-/* =================================
-   ACCESSIBILITY
-================================= */
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
-  }
-}
-.curtain-invitation h1 .groom-name {
-  color: var(--sage-dark) !important;
-}
-
-.intro-card h1 .groom-name {
-  color: var(--sage-dark) !important;
-}
-
-.hero-section h1 .groom-name {
-  color: var(--sage-dark) !important;
-}
-
-.footer-section h2 .groom-name {
-  color: var(--sage-dark) !important;
-}
-/* Curtain S & A colours */
-
-.curtain-monogram {
-  color: var(--sage-dark) !important;
-}
-
-.curtain-monogram i {
-  color: var(--gold) !important;
-}
-.intro-card h1 .groom-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 0.65em;
-  font-weight: 400;
-  color: var(--sage-dark);
-  display: inline-block;
-  vertical-align: middle;
-}
-/* BEAUTIFUL WEDDING CLOSING PAGE */
-
-.footer-section {
-  position: relative;
-  min-height: 90vh;
-  padding: 100px 22px 75px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  background:
-    radial-gradient(
-      ellipse at center,
-      #f0f5e9,
-      transparent 75%
-    ),
-    #e2ead8;
-
-  color: var(--sage-dark);
-  border-top: 5px double var(--gold);
-}
-
-.footer-flowers {
-  margin-bottom: 25px;
-  color: var(--gold);
-  font-size: 55px;
-  letter-spacing: 12px;
-}
-
-.footer-section .mini-label {
-  color: var(--gold);
-  letter-spacing: 4px;
-  font-size: 12px;
-}
-
-.footer-section h2 {
-  margin: 22px 0;
-  color: var(--sage-dark);
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(48px, 11vw, 82px);
-  font-weight: 400;
-  white-space: nowrap;
-}
-
-.footer-section h2 span {
-  color: var(--gold);
-}
-
-.footer-date {
-  margin: 10px 0;
-  color: var(--sage-dark);
-  font-size: 15px;
-  letter-spacing: 5px;
-}
-
-.footer-section .floral-line {
-  margin: 25px auto;
-}
-
-.footer-message {
-  margin: 15px 0;
-  color: var(--sage-dark);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 27px;
-  font-style: italic;
-  line-height: 1.7;
-}
-
-.footer-thanks {
-  max-width: 340px;
-  margin: 18px auto;
-  color: #95847a;
-  font-size: 19px;
-  line-height: 1.7;
-}
-
-.footer-heart {
-  margin: 22px 0;
-  color: var(--rose);
-  font-size: 25px;
-}
-
-.footer-blessing {
-  margin-top: 8px;
-  color: var(--gold);
-  font-family: 'Great Vibes', cursive;
-  font-size: 30px;
-}
-
-/* FLORAL WEDDING CLOSING PAGE */
 
 .footer-section {
   position: relative;
   min-height: 100vh;
-  padding: 85px 22px 65px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
-  text-align: center;
-
-  background:
-    radial-gradient(
-      ellipse at center,
-      #f3f7ed,
-      transparent 75%
-    ),
-    #e2ead8;
-
-  color: var(--sage-dark);
-  border-top: 5px double var(--gold);
+  isolation: isolate;
 }
 
-.footer-ornament {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  margin-bottom: 35px;
-  color: var(--gold);
-  font-size: 38px;
+.footer-floral {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 
-.footer-ornament .ornament-heart {
-  font-size: 52px;
-  line-height: 1;
+.footer-floral img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
-.footer-section .mini-label {
-  color: var(--gold);
-  font-size: 12px;
-  letter-spacing: 4px;
+.footer-section > *:not(.footer-floral) {
+  position: relative;
+  z-index: 2;
 }
+
+/* Text responsive sizing only */
 
 .footer-section h2 {
-  margin: 25px 0;
-  color: var(--sage-dark);
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(48px, 11vw, 82px);
-  font-weight: 400;
-  white-space: nowrap;
-}
-
-.footer-section h2 span {
-  color: var(--gold);
-}
-
-.footer-date {
-  margin: 10px 0;
-  color: var(--sage-dark);
-  font-size: 16px;
-  letter-spacing: 5px;
-}
-
-.footer-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin: 25px auto;
-  color: var(--gold);
-}
-
-.footer-divider span {
-  width: 65px;
-  height: 1px;
-  background: var(--gold);
-}
-
-.footer-divider b {
-  font-size: 25px;
-  font-weight: 400;
+  font-size: clamp(38px, 8vw, 82px);
 }
 
 .footer-message {
-  margin: 20px 0;
-  color: var(--sage-dark);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 29px;
-  font-style: italic;
-  line-height: 1.7;
+  font-size: clamp(23px, 4vw, 29px);
 }
 
 .footer-thanks {
-  max-width: 350px;
-  margin: 20px auto;
-  color: #95847a;
-  font-size: 20px;
-  line-height: 1.7;
+  font-size: clamp(17px, 3vw, 20px);
 }
 
-.footer-heart {
-  margin: 25px 0;
-  color: var(--rose);
-  font-size: 28px;
-}
-
-.footer-blessing {
-  margin: 10px 0;
-  color: var(--gold);
-  font-family: 'Great Vibes', cursive;
-  font-size: 32px;
-}
-
-.footer-bottom-ornament {
-  margin-top: 25px;
-  color: var(--gold);
-  font-size: 27px;
-  letter-spacing: 10px;
-}
-
-@media (max-width: 600px) {
-  .footer-section {
-    min-height: 90vh;
-    padding: 70px 18px;
-  }
-
-  .footer-ornament {
-  margin-bottom: 35px;
-  color: var(--gold);
-  font-size: 48px;
-  text-align: center;
-}
-
-  .footer-ornament .ornament-heart {
-    font-size: 43px;
-  }
-
-  .footer-section h2 {
-    font-size: clamp(43px, 11vw, 58px);
-  }
-
-  .footer-message {
-    font-size: 25px;
-  }
-
-  .footer-thanks {
-    font-size: 18px;
-  }
-}
 /* =================================
    FOOTER FLORAL - FINAL RESPONSIVE
 ================================= */
@@ -1886,4 +1480,295 @@ section {
     object-fit: cover;
     object-position: left center;
   }
+}
+/* =================================
+   LAPTOP FOOTER FLORAL FIX
+================================= */
+
+@media (min-width: 601px) {
+  .footer-floral {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .footer-floral img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+
+    -webkit-mask-image: radial-gradient(
+      ellipse 43% 38% at center,
+      transparent 0%,
+      transparent 55%,
+      rgba(0, 0, 0, 0.5) 78%,
+      black 100%
+    );
+
+    mask-image: radial-gradient(
+      ellipse 43% 38% at center,
+      transparent 0%,
+      transparent 55%,
+      rgba(0, 0, 0, 0.5) 78%,
+      black 100%
+    );
+  }
+
+  .footer-section > *:not(.footer-floral) {
+    position: relative;
+    z-index: 2;
+  }
+}
+/* =================================
+   NIKAH DETAILS - SCRATCH CARD
+================================= */
+
+.scratch-card {
+  height: 330px;
+  overflow: hidden;
+}
+
+.scratch-under {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.save-date-section {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 18px 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  background: radial-gradient(
+    circle at center,
+    #fffef8,
+    #e8f0df
+  );
+}
+
+.save-date-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.save-date-label {
+  margin: 0 0 10px;
+  color: #c6a875;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  letter-spacing: 4px;
+}
+
+.save-date-content .section-heading {
+  margin: 0 0 12px;
+  color: #788d68;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(25px, 5vw, 34px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.save-date-details {
+  margin: 0 0 14px;
+  color: #c6a875;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.save-date-number {
+  margin: 0;
+  color: #788d68;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 10vw, 65px);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.save-date-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+.save-date-divider span:not(.save-date-heart) {
+  width: 65px;
+  height: 1px;
+  background: #c6a875;
+}
+
+.save-date-heart {
+  color: #c6a875;
+  font-size: 19px;
+}
+
+.save-date-message {
+  margin: 12px 0 0;
+  color: #788d68;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  font-style: italic;
+}
+
+/* Mobile and laptop same card layout */
+
+@media (max-width: 600px) {
+  .scratch-card {
+    height: 330px;
+  }
+
+  .save-date-number {
+    font-size: 55px;
+  }
+
+  .save-date-content .section-heading {
+    font-size: 27px;
+  }
+
+  .save-date-details {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
+/* FINAL WEDDING MESSAGE */
+
+.footer-section {
+  min-height: 280px;
+  padding: 70px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  text-align: center;
+  background: var(--blush);
+}
+
+.footer-section .mini-label {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 13px;
+}
+
+.footer-thanks {
+  color: #9b8b7e;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 3vw, 23px);
+  line-height: 1.6;
+}
+
+.footer-blessing {
+  color: var(--gold);
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  margin: 0;
+}
+.groom-name {
+  font-family: 'Great Vibes', cursive;
+  text-transform: none !important;
+}
+
+.groom-initial {
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.85em;
+  display: inline-block;
+  vertical-align: 0.05em;
+}
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+.invitation-couple-name,
+.curtain-couple-name,
+.hero-couple-name,
+.bride-name,
+.groom-name,
+.curtain-monogram,
+.intro-emblem .initial-s,
+.intro-emblem .initial-a,
+.intro-emblem .initial-amp {
+  font-family: 'Pinyon Script', cursive !important;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+}
+/* =====================================
+   WEDDING NAMES - ELEGANT CALLIGRAPHY
+===================================== */
+
+/* First invitation name */
+.intro-card h1.invitation-couple-name,
+h1.invitation-couple-name {
+  font-family: 'Pinyon Script', cursive !important;
+  font-size: clamp(48px, 8vw, 72px) !important;
+  font-weight: 400 !important;
+  line-height: 1.3;
+  text-transform: none !important;
+}
+
+/* Curtain names */
+.curtain-invitation h1.curtain-couple-name {
+  font-family: 'Pinyon Script', cursive !important;
+  font-size: clamp(48px, 8vw, 76px) !important;
+  font-weight: 400 !important;
+  line-height: 1.3;
+}
+
+/* Main hero names */
+.hero-section h1.hero-couple-name {
+  font-family: 'Pinyon Script', cursive !important;
+  font-size: clamp(48px, 8vw, 76px) !important;
+  font-weight: 400 !important;
+  line-height: 1.3;
+}
+
+/* Bride and groom names */
+.person-card h3.bride-name,
+.person-card h3.groom-name {
+  font-family: 'Pinyon Script', cursive !important;
+  font-size: 48px !important;
+  font-weight: 400 !important;
+  line-height: 1.2;
+}
+
+/* S & A monogram */
+.intro-emblem span.initial-s,
+.intro-emblem span.initial-a,
+.intro-emblem span.initial-amp,
+.curtain-invitation p.curtain-monogram {
+  font-family: 'Pinyon Script', cursive !important;
+  font-weight: 400 !important;
+}
+/* S & A Monogram Colours */
+
+.intro-emblem .initial-s,
+.intro-emblem .initial-a,
+.curtain-monogram {
+  color: #788d68 !important;
+}
+
+.intro-emblem .initial-amp,
+.curtain-monogram i {
+  color: #c6a875 !important;
 }
