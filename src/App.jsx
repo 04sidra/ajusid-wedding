@@ -410,6 +410,21 @@ function App() {
             <p className="arabic" lang="ar" dir="rtl">
               بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
             </p>
+            <div className="hero-dua">
+  <p className="quran-text" lang="ar" dir="rtl">
+    وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ
+    أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا
+    وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+  </p>
+
+  <p className="quran-translation">
+    “And He placed between you affection and mercy.”
+  </p>
+
+  <p className="quran-reference">
+    SURAH AR-RUM · 30:21
+  </p>
+</div>
 
             <p className="mini-label">
               A beautiful beginning
@@ -452,33 +467,7 @@ function App() {
             <ScratchCard />
           </section>
 
-          {/* BLESSING */}
-
-          <section className="blessing-section">
-            <p className="mini-label">
-              A journey blessed with love
-            </p>
-
-            <h2 className="section-heading">
-              With the Blessings of Allah
-            </h2>
-
-            <FloralLine />
-
-            <p className="quran-text" lang="ar" dir="rtl">
-              وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ
-              أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا
-              وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
-            </p>
-
-            <p className="quran-translation">
-              “And He placed between you affection and mercy.”
-            </p>
-
-            <p className="quran-reference">
-              SURAH AR-RUM · 30:21
-            </p>
-          </section>
+          
 
           {/* COUNTDOWN */}
 
