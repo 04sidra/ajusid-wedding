@@ -271,7 +271,7 @@ function ScratchCard() {
             </p>
 
             <h1 className="save-date-number">
-              11:00 AM
+              10:30 AM
             </h1>
 
             <div className="save-date-divider">
