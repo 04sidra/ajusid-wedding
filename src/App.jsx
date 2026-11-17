@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import "./App.css";
 
-const weddingDate = new Date("2026-12-19T11:00:00");
+const weddingDate = new Date("2026-12-19T10:30:00");
 
 const mapLink =
   "https://www.google.com/maps/dir//TKH+Auditorium,+VWQM%2BVJ9,+Kattachira+Rd,+Tirur,+Talakkad,+Keralam+676102/@10.8241309,75.936384,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba7b1b0048238db:0xf1dad0b1ab4c0b23!2m2!1d75.9340934!2d10.8897107?entry=ttu";
